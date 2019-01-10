@@ -35,6 +35,7 @@ porechop -i input_reads.fastq.gz > output_reads.fastq
 For more detailed please have a look the link below.
 
 Installation : https://github.com/rrwick/Porechop
+
 Basic use : http://porecamp.github.io/2017/adapter_trimming.html. 
 
 Once you have per-process your raw reads you can run genome assembly.
