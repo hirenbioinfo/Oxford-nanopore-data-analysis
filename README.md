@@ -5,14 +5,23 @@ Nanopore raw reads to final assembly and annotation with command line tools
 This tutorial demonstrates how we can use oxford nanopore sequence reads to assemble a bacterial genome, including error correcting the assembly with short Illumina reads and genome circularization.
 Resources
 Tools used in this tutorial:
-canu v1.7 (https://github.com/marbl/canu)
-infoseq (http://www.bioinformatics.nl/cgi-bin/emboss/infoseq) and sizeseq v6.6.0.0 (http://www.bioinformatics.nl/cgi-bin/emboss/sizeseq)
-circlator v1.5.1 (https://sanger-pathogens.github.io/circlator/)	
+
+canu v1.7 
+
+infoseq  and sizeseq v6.6.0.0
+
+circlator v1.5.1
+
 bwa v0.7.15 
+
 samtools v1.3.1
+
 spades v3.10.1
+
 makeblastdb and blastn (part of blast) v2.4.0+
+
 pilon v1.20
+
 
 Steps:
 
