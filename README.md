@@ -1,5 +1,5 @@
 
-Nanopore raw reads to final assembly with command line tools
+Nanopore raw reads to final assembly and annotation with command line tools
 
 
 This tutorial demonstrates how we can use oxford nanopore sequence reads to assemble a bacterial genome, including error correcting the assembly with short Illumina reads and genome circularization.
@@ -58,13 +58,13 @@ Move 	into canu_out dir and ls 	to 	see the output files.
 after runnning assembly you will get a file “XXXXcontigs.fasta”, which is the final assembled output. In the output folder you can find assembly statistics also. Canu have many different option also such as you can change number of  threads while running lummerland server. Please have a look all detailed in the link bellow.  http://canu.readthedocs.io/en/latest/
 
 
-4. Display summary information about the contigs: (infoseq is a tool from EMBOSS)
+3. Display summary information about the contigs: (infoseq is a tool from EMBOSS)
 
 infoseq canu.contigs.fasta
 	This will show the contigs found by Canu. e.g.,
    - tig00000001   49XXXXX
 This looks like a approximately 4.9 million bases, which is to be chromosome.
-5. In the next step you need to run error correction with illumina reads. 
+4. In the next step you need to run error correction with illumina reads. 
  
 bwa index contigs.fasta 
 bwa mem -t 32 contigs.fasta illumina_R1.fastq.gz illumina_R2.fastq.gz | samtools sort > aln.bam
