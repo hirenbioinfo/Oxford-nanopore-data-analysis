@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -c 32
+#SBATCH -c 8
 #SBATCH -p long
 #SBATCH --mail-type=END
 #SBATCH --mail-user=hig18@dsmz.de
@@ -7,5 +7,6 @@
 #
 for F in *.fasta; do 
   N=$(basename $F .fasta) ; 
-  prokka --locustag $N --outdir $N --prefix $N  $F ; 
+  prokka --cpus 8 --force --locustag $N --kingdom Bacteria \
+  --outdir $N --prefix $N  $F ; 
 done
