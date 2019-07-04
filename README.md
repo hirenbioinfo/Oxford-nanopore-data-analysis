@@ -43,10 +43,12 @@ Once you have per-process your raw reads you can run genome assembly.
 
 ## 2. Assembley : Use Canu v1.7 (please note about the canu version according to developer, the latest version of canu work better for automatic plasmid rescue)
 
+```
 <your path where canu installed> canu -p ecoli -d ecoli-oxford genomeSize=4.8m -nanopore-raw oxford.fasta
 
 Output : 
 
+```
 
 Move 	into canu_out dir and ls 	to 	see the output files.
 	
@@ -62,13 +64,16 @@ after runnning assembly you will get a file “XXXXcontigs.fasta”, which is th
 
 ## 3. Display summary information about the contigs: (infoseq is a tool from EMBOSS)
 
+```
 infoseq canu.contigs.fasta
 	This will show the contigs found by Canu. e.g.,
    - tig00000001   49XXXXX
 This looks like a approximately 4.9 million bases, which is to be chromosome.
+```
 
 ## 4. In the next step you need to run error correction with illumina reads. 
  
+```
 bwa index contigs.fasta 
 bwa mem -t 32 contigs.fasta illumina_R1.fastq.gz illumina_R2.fastq.gz | samtools sort > aln.bam
 
@@ -79,9 +84,14 @@ samtools faidx genome.fasta
 Run Pilon
 pilon --genome genome.fasta --frags aln.bam --output pilon1 --fix all --mindepth 0.5 --changes --verbose --threads 32
 
+```
+
 
 ## 5. Circularization:
+
 Once you have run error correction last step is genome circularization. Here you can follow different steps. Manually or via command line tool. To do manually you need to run balstn(Query Sequence and subject sequence will be same) of final contigs. From blast result if you can look a end overlap the you need to cut that position and make the final cicular genome. Another approach could be by using Circlator. Here you need to run command line tool. 
-circlator all --threads 8 --verbose canu.contigs.fasta canu_outdir canu.correctedReads.fasta.gz circlator_outdir
+
+```circlator all --threads 8 --verbose canu.contigs.fasta canu_outdir canu.correctedReads.fasta.gz circlator_outdir ```
+
 
 
