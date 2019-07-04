@@ -1,11 +1,12 @@
 # Nanopore Data analysis
 
-Analysis solutions for nanopore sequencing data. We provide workflows, tutorials and a virtual box image to help researchers process microbial data.
+The following is a tutorial that demonstrates a pipeline used to assemble and annotate a bacterial genome from Oxford Nanopore MinION data..
 [Nanopore](https://nanoporetech.com/nanopore-sequencing-data-analysis)
 
 
 Please see our wiki site for more info.
 
 ##Contact
-"< a href="mailto:hiren.ghosh@dsmz.de">John< /a>"
+
+"hiren.ghosh@dsmz.de"
 
