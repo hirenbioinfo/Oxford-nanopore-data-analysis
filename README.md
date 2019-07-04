@@ -6,13 +6,13 @@ This tutorial demonstrates how we can use oxford nanopore sequence reads to asse
 Resources
 Tools used in this tutorial:
 
-canu v1.7 
+[canu v1.7](https://canu.readthedocs.io/en/latest/index.html)
 
-infoseq  and sizeseq v6.6.0.0
+[infoseq](http://www.bioinformatics.nl/cgi-bin/emboss/infoseq)  and [sizeseq v6.6.0.0](http://www.bioinformatics.nl/cgi-bin/emboss/sizeseq)
 
-circlator v1.5.1
+[circlator v1.5.1](http://sanger-pathogens.github.io/circlator/)
 
-bwa v0.7.15 
+[bwa v0.7.15](https://github.com/lh3/bwa) 
 
 samtools v1.3.1
 
