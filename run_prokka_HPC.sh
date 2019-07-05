@@ -25,3 +25,4 @@ echo -e "\t \t" $(($execution_time/60)) " minutes \n"
 echo -e "\t \t" $(($execution_time/3600)) " hours \n"
 
 #submit the job by using sbatch run_prokka_HPC.sh
+#check the job squeue
