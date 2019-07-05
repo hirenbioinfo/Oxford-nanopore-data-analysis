@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=Prokka assembly 
 #SBATCH --nodes= 8
-#SBATCH --mem= 65536
+#SBATCH --mem= 65536 # Memory pool for all cores (see also --mem-per-cpu)
 #SBATCH -p long
 #SBaTCh --mail-type=begin
 #SBATCH --mail-type=end
