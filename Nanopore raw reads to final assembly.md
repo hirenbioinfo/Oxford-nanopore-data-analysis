@@ -1,6 +1,6 @@
 	 	 	 	
 
-Nanopore raw reads to final assembly with command line tools
+# Nanopore raw reads to final assembly with command line tools
 
 
 This tutorial demonstrates how we can use oxford nanopore sequence reads to assemble a bacterial genome, including error correcting the assembly with short Illumina reads and genome circularization.
