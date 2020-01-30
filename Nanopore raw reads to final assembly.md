@@ -64,11 +64,14 @@ after runnning assembly you will get a file “XXXXcontigs.fasta”, which is th
 
 # 3. Display summary information about the contigs: (infoseq is a tool from EMBOSS)
 
+
 infoseq canu.contigs.fasta
 	This will show the contigs found by Canu. e.g.,
    - tig00000001   49XXXXX
 This looks like a approximately 4.9 million bases, which is to be chromosome.
+
 # 4. In the next step you need to run error correction with illumina reads. 
+
  
 bwa index contigs.fasta 
 bwa mem -t 32 contigs.fasta illumina_R1.fastq.gz illumina_R2.fastq.gz | samtools sort > aln.bam
@@ -77,12 +80,14 @@ Index the files:
 samtools index aln.bam 
 samtools faidx genome.fasta
 
+
 Run Pilon
 pilon --genome genome.fasta --frags aln.bam --output pilon1 --fix all --mindepth 0.5 --changes --verbose --threads 32
 
 
 # 5. Circularization:
 Once you have run error correction last step is genome circularization. Here you can follow different steps. Manually or via command line tool. To do manually you need to run balstn(Query Sequence and subject sequence will be same) of final contigs. From blast result if you can look a end overlap the you need to cut that position and make the final cicular genome. Another approach could be by using Circlator. Here you need to run command line tool. 
+
 circlator all --threads 8 --verbose canu.contigs.fasta canu_outdir canu.correctedReads.fasta.gz circlator_outdir
 
 output : You can find the output “04.merge.circularise.log”. Cirulator also oriented at your final genome according to dnaA.  
