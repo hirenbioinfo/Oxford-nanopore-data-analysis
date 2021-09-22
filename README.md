@@ -9,5 +9,5 @@ Please see our [wiki](https://github.com/hirenbioinfo/Oxford-nanopore-data-analy
 
 ##Contact
 
-"hiren.ghosh@dsmz.de"
+"hiren.ghosh@gmail.com"
 
