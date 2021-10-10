@@ -1,4 +1,4 @@
-# Nanopore Data analysis
+# Nanopore Data analysis 
 
 The following tutorial will demonstrate a basic pipeline to assembly and annotation of bacterial genome from Oxford Nanopore data.
 
